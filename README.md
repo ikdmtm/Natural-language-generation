@@ -1,2 +1,2 @@
-# Natural-language-generation
+# Natural_language_generation
 Natural language generation program
