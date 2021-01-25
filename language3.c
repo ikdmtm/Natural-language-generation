@@ -10,7 +10,7 @@ int main(void) {
 
 	inp = fopen("text2.txt","r");
 
-	while((str[i] = fgetc(inp)) != EOF) {
+	while((str[i] = fgetc(inp)) != EOF) { //ファイルを終端まで一文字づつ読み込み
 		if(str[i] >= 65 && str[i] <= 90 || str[i] == 32){
 			m+=1;
 		}

@@ -12,8 +12,8 @@ int main(void) {
 	inp = fopen("text2.txt","r");
 	out = fopen("text3.txt","w");
 
-	srand((unsigned)time(NULL));
-	for(i=0;i<=m;i++){
+	srand((unsigned)time(NULL)); //乱数を生成、シード値を現在時刻から取得
+	for(i=0;i<=m;i++){ //文字数分アルファベットを生成
 		r[i] = rand()%(m+1);
 	}
 	

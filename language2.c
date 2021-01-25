@@ -9,10 +9,10 @@ int main(void) {
 	FILE *out,*inp; 
 
 	inp = fopen("text2.txt","r");
-	while((str[i] = fgetc(inp)) != EOF) {
+	while((str[i] = fgetc(inp)) != EOF) { //ファイルの文字を一文字づつ終端まで読み込み
 		for(k=0; k<=26; k++){
 			if(str[i]==k+64){
-				alpha[k] = alpha[k] + 1;
+				alpha[k] = alpha[k] + 1; //スペースはalphabet[0]に、a～zはalphabet[1～26]にプラスしてカウント
 			}else if(str[i]==k+32){
 				alpha[0] = alpha[0] + 1;
 			}
@@ -20,8 +20,9 @@ int main(void) {
 		i++;			
 	}
 	
+	printf(" , a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z\n");
 	for(j=0; j<=26; j++){
-		printf("%d ", alpha[j]);
+		printf("%d ", alpha[j]); //カウントした数を表示
 	}
 	printf("\n");
 
